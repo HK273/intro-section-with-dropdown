@@ -14,7 +14,7 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 ### Links
 
 - Solution URL: (https://your-solution-url.com)
-- Live Site URL:(https://hk273.github.io/intro-section-with-dropdown/)
+- [Live Site URL:](https://hk273.github.io/intro-section-with-dropdown/)
 
 ### Useful resources
 
