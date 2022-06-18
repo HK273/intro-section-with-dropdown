@@ -13,7 +13,7 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- [Solution URL] (https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-eHCH8y40mH)
 - [Live Site](https://hk273.github.io/intro-section-with-dropdown/)
 
 ### Useful resources
