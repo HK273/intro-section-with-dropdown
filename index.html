@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <script src="script/menu.js" defer></script>
+    <title>Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main class="content">
+      <!-- Navbar Start -->
+      <header class="header">
+        <nav class="menu navbar">
+          <li><img class="logo_one" src="images/logo.svg" alt="logo" /></li>
+          <ul class="nav-menu">
+            <div class="nav-opac"></div>
+            <div class="nav-wrapper">
+              <li><img class="logo" src="images/logo.svg" alt="logo" /></li>
+              <li class="item has-submenu">
+                <a id="item-one" class="main-item" tabindex="0"
+                  >Features<i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="submenu">
+                  <li class="subitem">
+                    <img
+                      class="icons"
+                      src="images/icon-todo.svg"
+                      alt="to-do-icon"
+                      srcset=""
+                    /><a href="#">Todo List</a>
+                  </li>
+                  <li class="subitem">
+                    <img
+                      class="icons one"
+                      src="images/icon-calendar.svg"
+                      alt="calendar-icon"
+                      srcset=""
+                    />
+                    <a href="#">Calendar</a>
+                  </li>
+                  <li class="subitem">
+                    <img
+                      class="icons two"
+                      src="images/icon-reminders.svg"
+                      alt="reminders-icon"
+                      srcset=""
+                    />
+                    <a href="#">Reminders</a>
+                  </li>
+                  <li class="subitem">
+                    <img
+                      class="icons three"
+                      src="images/icon-planning.svg"
+                      alt="planning-icon"
+                      srcset=""
+                    />
+                    <a href="#">planning</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item has-submenu">
+                <a id="item-two" class="main-item" tabindex="0"
+                  >Company<i class="ftwo fas fa-chevron-down"></i
+                ></a>
+                <ul class="submenu">
+                  <li class="subitem"><a href="#">History</a></li>
+                  <li class="subitem"><a href="#">Our Team</a></li>
+                  <li class="subitem"><a href="#">Blog</a></li>
+                </ul>
+              </li>
+              <span class="space"></span>
+              <!-- Line seperator -->
+              <li class="nav-item">
+                <button class="btn careers">Careers</button>
+              </li>
+              <li class="nav-item"><button class="btn about">About</button></li>
+
+              <li class="main-item nav-item login">Login</li>
+              <li class="nav-item">
+                <button class="buttons">Register</button>
+              </li>
+            </div>
+          </ul>
+          <li class="toggle"></li>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <!-- Navbar End -->
+      <div class="wrapper">
+        <div class="container">
+          <div class="col_one">
+            <img
+              class="hero-img"
+              src="images/image-hero-desktop.png"
+              alt="hero-image"
+            />
+          </div>
+          <div class="col_two">
+            <div class="desc">
+              <h1>Make remote work</h1>
+              <p>
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar
+              </p>
+              <button class="buttons-l">Learn More</button>
+              <div class="flex-icons">
+                <img
+                  class="icon-img"
+                  src="images/client-databiz.svg"
+                  alt="databiz-icon"
+                />
+                <img
+                  class="icon-img"
+                  src="images/client-audiophile.svg"
+                  alt="audiophile-icon"
+                />
+                <img
+                  class="icon-img"
+                  src="images/client-meet.svg"
+                  alt="meet-icon"
+                />
+                <img
+                  class="icon-img"
+                  src="/images/client-maker.svg"
+                  alt="maker-icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

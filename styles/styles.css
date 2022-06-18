@@ -1,0 +1,214 @@
+/* ===============================================================================
+Styles for Intro section with dropdown navigation:
+prevent image strethcing with flex-box: https://techstacker.com/how-to-prevent-image-stretching-with-flexbox/
+=================================================================================== */
+/* Resets */
+
+/* Epilogue */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+/* Custom Properties  */
+
+:root {
+  /* Neautral */
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+/* Resets */
+html,
+body {
+  min-height: 100%;
+}
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+body {
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  /* mobile viewport bug fix */
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+.wrapper {
+  width: 90vw;
+  margin-inline: auto;
+}
+.container {
+  display: grid;
+  gap: 5rem;
+}
+/* General Styles */
+h1 {
+  font-size: 5rem;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+p {
+  font-size: 2rem;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  color: var(--medium-gray);
+  margin-bottom: 3rem;
+}
+.buttons-l {
+  margin-bottom: 5rem;
+}
+.hero-img {
+  max-width: 100%;
+}
+
+/* Centre description */
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: 1ch;
+}
+
+.icon-img {
+  max-width: 100%;
+  /* prevent image stretching */
+  align-self: center;
+  margin-bottom: 5rem;
+}
+.flex-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.buttons-l {
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  width: 18rem;
+  height: 6rem;
+  text-align: center;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 1.8rem;
+}
+.buttons-l:hover {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  border: 1px solid black;
+}
+
+/* Media Queries */
+
+/* Keep mobile view but reduce wrapper size */
+@media screen and (min-width: 700px) {
+  .wrapper {
+    width: 80vw;
+    margin-inline: auto;
+  }
+}
+
+/* Swtich from mobile view to medium view /
+Change column positioning and wrapper width */
+@media screen and (min-width: 650px) {
+  .wrapper {
+    border-radius: 0.5rem;
+    margin-bottom: 10rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10rem;
+    /* t-r-b-l */
+    padding: 0 10rem 10rem 10rem;
+  }
+  /* change column order */
+  .col_one {
+    order: 2;
+  }
+  .col_two {
+    margin-top: 8rem;
+  }
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 4rem;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+  }
+  p {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+  }
+  .buttons-l {
+    margin-bottom: 8rem;
+  }
+}
+
+/* Desktop column postioning and wrapper width */
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    width: 145rem;
+    padding-block: 5rem;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    margin-inline: auto;
+    padding: 0 10rem 0 10rem;
+  }
+  .col_two {
+    margin-top: 10rem;
+  }
+  .desc {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+/* Largest screen size */
+@media screen and (min-width: 2000px) {
+  .wrapper {
+    width: 150rem;
+  }
+  .col_two {
+    margin-top: 15rem;
+  }
+}

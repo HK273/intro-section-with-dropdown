@@ -1,0 +1,396 @@
+/* Resources */
+
+/* CSS Box shadows: https://getcssscan.com/css-box-shadow-examples */
+/* Mobile vh fix: https://dev.to/rachelg/a-javascript-fix-for-the-100vh-problem-on-mobile-screens-9im */
+
+/* Import styles */
+
+/* Overpass */
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+
+/* Ubuntu */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+/* Custom Properties  */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+/* Custom Properties  */
+
+:root {
+  --white-text: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  /* Neautral */
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+/* Resets */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+body {
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  /* mobile viewport bug fix */
+  min-height: 100%;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  /* t-r-b-l */
+  padding: 0 4rem 5rem 4rem;
+  list-style: none;
+  overflow: hidden;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+}
+
+/* Just couldn't get the Navbar logo working correctly with the spaces,
+this works butsure there is a better way to do this.
+*/
+
+.logo_one {
+  display: none;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: 3rem;
+  margin-top: 0.4rem;
+}
+
+.nav-wrapper {
+  white-space: nowrap;
+  list-style-type: none;
+  padding-top: 2.5rem;
+  /* First three items left of screen */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Submenu */
+
+/* Line on moblile menu between login / sign up / other items */
+
+.space {
+  display: none;
+}
+
+/* login / sign up left of screen */
+
+nav li:nth-child(7) {
+  margin-left: auto;
+}
+
+.main-item {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  /* Space between links */
+  margin: 0 1.9rem;
+  color: var(--almost-black);
+  font-size: 1.8rem;
+  transition: all 0.3s ease 0s;
+}
+.login:hover {
+  color: #06d6a0;
+}
+.nav-item {
+  margin: 0 1.9rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button styles */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.btn {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  width: 10rem;
+  border-radius: 1rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 1.8rem;
+  margin-left: -1rem;
+}
+.about {
+  margin-left: -3rem;
+}
+
+/* on hover over button zoom */
+.about:hover {
+  background-color: #fc7d88;
+  color: var(--white-text);
+  /* colour text on transition */
+  color: white;
+}
+
+.careers:hover {
+  background-color: #06d6a0;
+  color: var(--white-text);
+  /* colour text on transition */
+  color: white;
+}
+
+/* Register */
+.buttons {
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  width: 14rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 1.8rem;
+}
+.buttons:hover {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  border: 1px solid black;
+}
+
+/* Hamburger styles */
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 4rem;
+  height: 0.3rem;
+  margin: 0.6rem auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+/* submenu */
+
+.active .item {
+  display: block;
+  position: relative;
+}
+
+li > a {
+  color: var(--medium-gray);
+}
+.submenu {
+  display: none;
+  position: absolute;
+  z-index: 0;
+  margin-top: 2rem;
+  list-style: none;
+  background-color: var(--white-text);
+  font-size: 1.6rem;
+  /* t-r-b-l */
+  padding: 1.4rem 3rem 1.4rem 3rem;
+  /* spacing between submenu items */
+  line-height: 2.2;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.icons {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu i {
+  font-size: 12px;
+}
+
+.toggle i {
+  font-size: 3rem;
+  color: white;
+}
+
+/* Breakpoints */
+
+/* Nav Header / Top Heading / Footer at smaller breakpoint */
+
+/* Navigation Menu */
+
+@media only screen and (max-width: 60em) {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* remove logo */
+  .logo {
+    display: none;
+  }
+  /* add flex logo */
+  .logo_one {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav-wrapper {
+    display: block;
+    padding-top: 3rem;
+    background-color: var(--almost-white);
+    min-height: calc(100vh + 65%);
+    width: 60vw;
+  }
+  .nav-menu {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    right: -100%;
+    width: 35rem;
+    border-radius: 1rem;
+    text-align: start;
+    align-items: flex-start;
+    /* This creates a slide in affect */
+    transition: 0.9s;
+  }
+  .nav-opac {
+    min-height: calc(100vh + 65%);
+    min-height: -webkit-fill-available;
+    min-width: 40vw;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.5;
+  }
+  .nav-menu.active {
+    /* Centre collapsable menu */
+    position: absolute;
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    min-width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Reset login / register up position */
+  nav li:nth-child(7) {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-item {
+    text-align: center;
+  }
+  /* Submenu */
+  .submenu {
+    position: relative;
+    /* t-r-b-l */
+    background-color: #fafafa;
+    box-shadow: none;
+    text-align: start;
+    margin: 1rem 0 0 2rem;
+    line-height: 2.2;
+  }
+  .about {
+    margin-bottom: 1.2rem;
+    margin-top: -0.5rem;
+    margin-left: 0;
+  }
+  .btn {
+    margin-left: 0;
+  }
+  /* Line seperating carreers / about / login / sign up */
+  .space {
+    display: block;
+    margin: 0.5rem 0;
+    border: 0.1rem solid var(--grayish-blue);
+    border-radius: 0.1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+  .logo_one {
+    margin-top: 2.5rem;
+  }
+
+  /* space between menu items */
+  .item {
+    margin-bottom: 2rem;
+  }
+  li:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  .hamburger {
+    position: relative;
+    margin-left: auto;
+    display: block;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  /* Hamburger transition */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(0.9rem) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-0.9rem) rotate(-45deg);
+  }
+}
+
+/* messy hack to sort out vh issue with scroll */
+@media only screen and (max-width: 40em) {
+  .nav-opac {
+    min-height: calc(100vh + 15%);
+    min-height: -webkit-fill-available;
+    min-width: 40vw;
+    background-color: black;
+    color: #fff;
+    opacity: 0.5;
+  }
+  .nav-wrapper {
+    display: block;
+    padding-top: 3rem;
+    background-color: var(--almost-white);
+    min-height: calc(100vh + 15%);
+    width: 60vw;
+  }
+}
