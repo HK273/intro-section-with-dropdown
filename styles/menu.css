@@ -1,23 +1,8 @@
-/* Resources */
-
-/* CSS Box shadows: https://getcssscan.com/css-box-shadow-examples */
-/* Mobile vh fix: https://dev.to/rachelg/a-javascript-fix-for-the-100vh-problem-on-mobile-screens-9im */
-
 /* Import styles */
 
-/* Overpass */
-
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
-
-/* Ubuntu */
-
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-
-/* Custom Properties  */
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 
 /* Custom Properties  */
-
 :root {
   --white-text: hsl(0, 0%, 100%);
   --grayish-blue: hsl(240, 2%, 79%);
